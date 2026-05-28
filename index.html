@@ -1,1 +1,31 @@
-<iframe width="560" height="315" src="https://youtubeeducation.com" title="YouTube Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Embedder</title>
+</head>
+<body>
+    <button onclick="openLink()">Open Fullscreen</button>
+
+    <script>
+        function openLink() {
+            // The URL you want to embed
+            var url = "https://sites.google.com/site/populardoodlegames/home"; 
+            
+            // Open a new about:blank window
+            var win = window.open();
+            win.document.body.style.margin = "0";
+            win.document.body.style.height = "100vh";
+            
+            // Create the iframe
+            var iframe = win.document.createElement('iframe');
+            iframe.style.width = "100%";
+            iframe.style.height = "100%";
+            iframe.style.border = "none";
+            iframe.src = url;
+            
+            // Add the iframe to the new window
+            win.document.body.appendChild(iframe);
+        }
+    </script>
+</body>
+</html>
