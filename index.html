@@ -1,31 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Embedder</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullscreen Embed</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden; /* Prevents extra scrollbars */
+        }
+        iframe {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
 </head>
 <body>
-    <button onclick="openLink()">Open Fullscreen</button>
-
-    <script>
-        function openLink() {
-            // The URL you want to embed
-            var url = "https://sites.google.com/site/populardoodlegames/home"; 
-            
-            // Open a new about:blank window
-            var win = window.open();
-            win.document.body.style.margin = "0";
-            win.document.body.style.height = "100vh";
-            
-            // Create the iframe
-            var iframe = win.document.createElement('iframe');
-            iframe.style.width = "100%";
-            iframe.style.height = "100%";
-            iframe.style.border = "none";
-            iframe.src = url;
-            
-            // Add the iframe to the new window
-            win.document.body.appendChild(iframe);
-        }
-    </script>
+    <iframe 
+        src="https://www.youtubeeducation.com/embed/ja5US-Tkb1A" 
+        allow="fullscreen" 
+        allowfullscreen>
+    </iframe>
 </body>
 </html>
